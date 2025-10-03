@@ -1,0 +1,1069 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Constitucional - Questões 51 a 100</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .option-btn {
+            transition: all 0.2s ease-in-out;
+        }
+        .correct {
+            background-color: #22c55e !important;
+            color: white !important;
+            border-color: #16a34a !important;
+        }
+        .incorrect {
+            background-color: #ef4444 !important;
+            color: white !important;
+            border-color: #dc2626 !important;
+        }
+    </style>
+</head>
+<body class="bg-slate-100 text-slate-800 flex items-center justify-center min-h-screen p-4">
+
+    <div id="quiz-container" class="bg-white w-full max-w-3xl rounded-2xl shadow-lg p-6 md:p-8">
+        <div id="quiz-header" class="mb-6">
+            <div class="flex justify-between items-center mb-2">
+                <h1 class="text-xl md:text-2xl font-bold text-slate-700">Quiz de Direito Constitucional</h1>
+                <span id="question-counter" class="text-sm font-semibold text-slate-500 bg-slate-100 px-3 py-1 rounded-full"></span>
+            </div>
+            <div class="w-full bg-slate-200 rounded-full h-2.5">
+                <div id="progress-bar" class="bg-blue-600 h-2.5 rounded-full transition-all duration-500"></div>
+            </div>
+        </div>
+
+        <div id="question-area">
+            <p id="question-text" class="text-lg md:text-xl font-semibold mb-6 min-h-[100px]"></p>
+            <div id="options-container" class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <!-- As opções serão inseridas aqui pelo JavaScript -->
+            </div>
+        </div>
+
+        <div id="justification-area" class="hidden mt-6 border-t-2 border-slate-200 pt-6">
+            <h3 class="text-lg font-bold mb-2 text-blue-700">Justificativa:</h3>
+            <p id="justification-text" class="text-base mb-4"></p>
+            <div class="bg-slate-50 p-4 rounded-lg">
+                <p class="font-semibold text-sm text-slate-600"><strong>Fundamento:</strong> <span id="legal-basis"></span></p>
+                <p class="font-semibold text-sm text-slate-600"><strong>Página no Arquivo:</strong> <span id="page-ref"></span></p>
+                <blockquote id="article-text" class="mt-2 border-l-4 border-blue-500 pl-4 text-sm text-slate-700 italic"></blockquote>
+            </div>
+        </div>
+
+        <div id="navigation" class="flex justify-between mt-8">
+            <button id="prev-btn" class="bg-slate-500 hover:bg-slate-600 text-white font-bold py-2 px-6 rounded-lg transition-colors">Anterior</button>
+            <button id="next-btn" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-lg transition-colors">Próxima</button>
+        </div>
+    </div>
+
+    <script>
+        const quizData = [
+            // Questão 51
+            {
+                id: 51,
+                question: "Durante uma grave crise econômica, a empresa \"Metalúrgica Futuro S.A.\" e o sindicato da categoria profissional de seus empregados firmaram um acordo coletivo de trabalho. Neste acordo, ficou estabelecida uma redução de 15% no salário de todos os funcionários por um período de 8 meses, como condição para evitar demissões em massa. Esta cláusula do acordo é:",
+                options: [
+                    { label: "A", text: "Inconstitucional, pois a irredutibilidade do salário é um direito absoluto do trabalhador." },
+                    { label: "B", text: "Constitucional, pois a Constituição permite a flexibilização da irredutibilidade salarial mediante convenção ou acordo coletivo." },
+                    { label: "C", text: "Inconstitucional, pois qualquer redução salarial só pode ser autorizada por lei federal." },
+                    { label: "D", text: "Constitucional, mas apenas se a redução não fizer com que o salário fique abaixo do piso da categoria." },
+                    { label: "E", text: "Inconstitucional, pois a redução salarial só é permitida por acordo individual entre empregado e empregador." },
+                    { label: "F", text: "Constitucional, desde que aprovada em referendo por todos os trabalhadores do país." },
+                ],
+                answer: "B",
+                justification: "A regra da irredutibilidade salarial não é absoluta. A própria Constituição Federal prevê, como exceção, a possibilidade de redução salarial, desde que seja estabelecida por meio de negociação coletiva (convenção ou acordo coletivo de trabalho), como ocorreu no caso apresentado.",
+                legalBasis: "Art. 7º, VI, da Constituição Federal",
+                page: 58,
+                articleText: "VI - irredutibilidade do salário, salvo o disposto em convenção ou acordo coletivo;"
+            },
+            // Questão 52
+            {
+                id: 52,
+                question: "A Constituição Federal estabelece que a remuneração do trabalho noturno deve ser superior à do diurno. Em relação ao percentual desse adicional, o texto constitucional:",
+                options: [
+                    { label: "A", text: "Fixa o adicional noturno em, no mínimo, 20% superior ao da hora diurna." },
+                    { label: "B", text: "Fixa o adicional noturno em, no mínimo, 50% superior ao da hora diurna." },
+                    { label: "C", text: "Não especifica um percentual mínimo, delegando essa definição à lei ou à negociação coletiva." },
+                    { label: "D", text: "Fixa o adicional noturno em exatamente 25% superior ao da hora diurna." },
+                    { label: "E", text: "Determina que o adicional noturno seja o mesmo da hora extra, ou seja, no mínimo 50%." },
+                    { label: "F", text: "Veda o trabalho noturno, salvo em atividades essenciais, caso em que o adicional é de 100%." },
+                ],
+                answer: "C",
+                justification: "A Constituição apenas garante que a remuneração do trabalho noturno será superior à do diurno, sem, contudo, definir um percentual. Essa definição fica a cargo da legislação infraconstitucional (a CLT, por exemplo, fixa em 20%) e da negociação coletiva.",
+                legalBasis: "Art. 7º, IX, da Constituição Federal",
+                page: 59,
+                articleText: "IX - remuneração do trabalho noturno superior à do diurno;"
+            },
+            // Questão 53
+            {
+                id: 53,
+                question: "Uma indústria química opera 24 horas por dia, com seus funcionários trabalhando em turnos que se alternam continuamente. A Constituição Federal estabelece, para o trabalho realizado em turnos ininterruptos de revezamento, uma jornada de 6 horas. Essa jornada pode ser alterada?",
+                options: [
+                    { label: "A", text: "Não, em nenhuma hipótese, por se tratar de norma de saúde e segurança do trabalho." },
+                    { label: "B", text: "Sim, pode ser ampliada para até 8 horas diárias, mediante negociação coletiva." },
+                    { label: "C", text: "Sim, pode ser alterada por simples acordo individual escrito entre o empregado e o empregador." },
+                    { label: "D", text: "Não, a menos que a empresa pague um adicional de periculosidade de 50%." },
+                    { label: "E", text: "Sim, mas apenas por meio de lei complementar federal." },
+                    { label: "F", text: "Não, pois se trata de cláusula pétrea dos direitos dos trabalhadores." },
+                ],
+                answer: "B",
+                justification: "A jornada de seis horas para turnos ininterruptos de revezamento é a regra geral. No entanto, a Constituição permite que essa jornada seja flexibilizada (ampliada), desde que haja previsão em negociação coletiva (convenção ou acordo coletivo).",
+                legalBasis: "Art. 7º, XIV, da Constituição Federal",
+                page: 61,
+                articleText: "XIV - jornada de seis horas para o trabalho realizado em turnos ininterruptos de revezamento, salvo negociação coletiva;"
+            },
+            // Questão 54
+            {
+                id: 54,
+                question: "Joana, analista de sistemas, precisou trabalhar por 3 horas além de sua jornada normal de 8 horas na última segunda-feira para finalizar um projeto urgente. De acordo com o Art. 7º, XVI, da Constituição Federal, a remuneração dessas horas extras deve ser superior à da hora normal em:",
+                options: [
+                    { label: "A", text: "Exatamente 50%." },
+                    { label: "B", text: "No mínimo, 20%." },
+                    { label: "C", text: "No mínimo, 50%." },
+                    { label: "D", text: "No mínimo, 100%." },
+                    { label: "E", text: "Um percentual a ser livremente negociado com o empregador." },
+                    { label: "F", text: "Exatamente 1/3." },
+                ],
+                answer: "C",
+                justification: "A Constituição Federal garante o direito à remuneração do serviço extraordinário com um acréscimo de, no mínimo, cinquenta por cento em relação à hora normal.",
+                legalBasis: "Art. 7º, XVI, da Constituição Federal",
+                page: 62,
+                articleText: "XVI - remuneração do serviço extraordinário superior, no mínimo, em cinquenta por cento à do normal;"
+            },
+            // Questão 55
+            {
+                id: 55,
+                question: "A licença-paternidade é um direito dos trabalhadores urbanos e rurais. O prazo dessa licença, segundo o texto do Art. 7º, XIX, da Constituição Federal, é:",
+                options: [
+                    { label: "A", text: "De 5 dias, fixado na própria Constituição." },
+                    { label: "B", text: "De 120 dias, igual à licença-gestante." },
+                    { label: "C", text: "A ser definido nos termos da lei." },
+                    { label: "D", text: "De 30 dias, conforme a Consolidação das Leis do Trabalho (CLT)." },
+                    { label: "E", text: "Proporcional ao tempo de serviço do empregado." },
+                    { label: "F", text: "De 7 dias, conforme o Ato das Disposições Constitucionais Transitórias." },
+                ],
+                answer: "C",
+                justification: "A Constituição Federal assegura o direito à licença-paternidade, mas delega à legislação infraconstitucional a fixação do prazo. O prazo de 5 dias, comumente conhecido, está previsto no Ato das Disposições Constitucionais Transitórias (ADCT), e não no corpo permanente da Constituição (Art. 7º).",
+                legalBasis: "Art. 7º, XIX, da Constituição Federal",
+                page: 63,
+                articleText: "XIX - licença-paternidade, nos termos fixados em lei;"
+            },
+            // Questão 56
+            {
+                id: 56,
+                question: "Um trabalhador foi demitido sem justa causa em 15 de abril de 2022. Durante seu contrato de trabalho, que durou de 2010 a 2022, a empresa nunca pagou suas horas extras. Ele deseja ajuizar uma reclamação trabalhista. De acordo com os prazos prescricionais previstos na Constituição Federal, até que data ele pode ajuizar a ação e qual período de créditos poderá pleitear?",
+                options: [
+                    { label: "A", text: "Pode ajuizar a ação a qualquer tempo, e pleitear os créditos dos últimos 5 anos." },
+                    { label: "B", text: "Tem até 15 de abril de 2027 para ajuizar a ação, podendo pleitear os créditos de todo o período trabalhado." },
+                    { label: "C", text: "Tem até 15 de abril de 2024 para ajuizar a ação, podendo pleitear os créditos dos últimos 5 anos contados da data do ajuizamento." },
+                    { label: "D", text: "Tem até 15 de abril de 2024 para ajuizar a ação, podendo pleitear os créditos de todo o período trabalhado." },
+                    { label: "E", text: "Tem até 15 de abril de 2025 para ajuizar a ação, podendo pleitear apenas os créditos dos últimos 2 anos." },
+                    { label: "F", text: "Pode ajuizar a ação a qualquer tempo, mas só pode pleitear os créditos dos últimos 2 anos." },
+                ],
+                answer: "C",
+                justification: "A Constituição estabelece uma dupla prescrição para os créditos trabalhistas: o trabalhador tem até 2 anos após a extinção do contrato (15/04/2024) para ajuizar a ação (prescrição bienal), e, ao ajuizá-la, só pode reclamar os créditos referentes aos últimos 5 anos do contrato (prescrição quinquenal).",
+                legalBasis: "Art. 7º, XXIX, da Constituição Federal",
+                page: 66,
+                articleText: "XXIX - ação, quanto aos créditos resultantes das relações de trabalho, com prazo prescricional de cinco anos para os trabalhadores urbanos e rurais, até o limite de dois anos após a extinção do contrato de trabalho;"
+            },
+            // Questão 57
+            {
+                id: 57,
+                question: "A Constituição Federal estabelece regras rígidas para o trabalho de menores, visando sua proteção. Assinale a alternativa que descreve corretamente a regra constitucional sobre o tema.",
+                options: [
+                    { label: "A", text: "Proibição de qualquer trabalho a menores de 18 anos." },
+                    { label: "B", text: "Permissão de qualquer trabalho a partir dos 14 anos, na condição de aprendiz." },
+                    { label: "C", text: "Proibição de trabalho noturno, perigoso ou insalubre a menores de 18 anos e de qualquer trabalho a menores de 16 anos, salvo na condição de aprendiz a partir dos 14 anos." },
+                    { label: "D", text: "Proibição de qualquer trabalho a menores de 16 anos, sem nenhuma exceção." },
+                    { label: "E", text: "Permissão de trabalho diurno não perigoso a partir dos 14 anos, mesmo fora da condição de aprendiz." },
+                    { label: "F", text: "Proibição de trabalho noturno a menores de 21 anos e de trabalho perigoso a menores de 18 anos." },
+                ],
+                answer: "C",
+                justification: "A Constituição estabelece uma escada de proteção: 1) Proíbe trabalho noturno, perigoso ou insalubre para menores de 18 anos. 2) Proíbe qualquer tipo de trabalho para menores de 16 anos. 3) A única exceção a essa última regra é o trabalho na condição de aprendiz, que é permitido a partir dos 14 anos.",
+                legalBasis: "Art. 7º, XXXIII, da Constituição Federal",
+                page: 67,
+                articleText: "XXXIII - proibição de trabalho noturno, perigoso ou insalubre a menores de dezoito e de qualquer trabalho a menores de dezesseis anos, salvo na condição de aprendiz, a partir de quatorze anos;"
+            },
+            // Questão 58
+            {
+                id: 58,
+                question: "O parágrafo único do Art. 7º da Constituição Federal estendeu diversos direitos dos trabalhadores urbanos e rurais à categoria dos trabalhadores domésticos. No entanto, alguns direitos não foram estendidos de forma plena ou sequer foram mencionados. Qual dos direitos abaixo NÃO é assegurado aos trabalhadores domésticos nos termos da Constituição?",
+                options: [
+                    { label: "A", text: "Salário mínimo." },
+                    { label: "B", text: "Férias anuais remuneradas com, pelo menos, um terço a mais do que o salário normal." },
+                    { label: "C", text: "Décimo terceiro salário." },
+                    { label: "D", text: "Participação nos lucros ou resultados da empresa." },
+                    { label: "E", text: "Aposentadoria." },
+                    { label: "F", text: "Repouso semanal remunerado, preferencialmente aos domingos." },
+                ],
+                answer: "D",
+                justification: "A participação nos lucros ou resultados (PLR) está vinculada à atividade empresarial, sendo um direito que não se aplica à relação de trabalho doméstico, que ocorre em âmbito residencial e sem fins lucrativos. O parágrafo único do Art. 7º não inclui este direito no rol dos aplicáveis aos domésticos.",
+                legalBasis: "Art. 7º, parágrafo único, da Constituição Federal",
+                page: 68,
+                articleText: "Parágrafo único. São assegurados à categoria dos trabalhadores domésticos os direitos previstos nos incisos IV, VI, VII, VIII, X, XIII, XV, XVI, XVII, XVIII, XIX, XXI, XXII, XXIV, XXVI, XXX, XXXI e XXXIII e, atendidas as condições estabelecidas em lei e observada a simplificação do cumprimento das obrigações tributárias, principais e acessórias, decorrentes da relação de trabalho e suas peculiaridades, os previstos nos incisos I, II, III, IX, XII, XXV e XXVIII, bem como a sua integração à previdência social."
+            },
+            // Questão 59
+            {
+                id: 59,
+                question: "Um grupo de professores de uma cidade deseja fundar um sindicato para representar sua categoria. Para isso, eles precisam:",
+                options: [
+                    { label: "A", text: "Obter autorização prévia do Ministério do Trabalho e Emprego." },
+                    { label: "B", text: "Obter autorização da prefeitura municipal por meio de lei específica." },
+                    { label: "C", text: "Apenas realizar o registro no órgão competente, sendo vedada a exigência de autorização do Estado para a fundação do sindicato." },
+                    { label: "D", text: "Filiarem-se a um sindicato já existente em nível estadual, pois a base territorial mínima é o estado." },
+                    { label: "E", text: "Comprovar um número mínimo de 100 filiados para poderem requerer o registro." },
+                    { label: "F", text: "Obter autorização judicial para a criação da nova entidade sindical." },
+                ],
+                answer: "C",
+                justification: "A Constituição Federal consagra o princípio da liberdade sindical, que veda a interferência e a intervenção do Poder Público na organização sindical. Isso significa que a criação de um sindicato independe de autorização do Estado, bastando o registro no órgão competente (atualmente o Ministério do Trabalho e Emprego) para fins de publicidade e controle da unicidade sindical.",
+                legalBasis: "Art. 8º, I, da Constituição Federal",
+                page: 75,
+                articleText: "I - a lei não poderá exigir autorização do Estado para a fundação de sindicato, ressalvado o registro no órgão competente, vedadas ao Poder Público a interferência e a intervenção na organização sindical;"
+            },
+            // Questão 60
+            {
+                id: 60,
+                question: "Joana foi eleita para o cargo de direção do sindicato de sua categoria. O registro de sua candidatura ocorreu em 1º de setembro de 2022. A eleição ocorreu em 15 de outubro de 2022 e seu mandato de um ano se encerrou em 14 de outubro de 2023. De acordo com a Constituição Federal, a estabilidade provisória de Joana no emprego se estende até:",
+                options: [
+                    { label: "A", text: "15 de outubro de 2023, data final de seu mandato." },
+                    { label: "B", text: "1º de setembro de 2023, um ano após o registro da candidatura." },
+                    { label: "C", text: "14 de outubro de 2024, ou seja, até um ano após o final do mandato." },
+                    { label: "D", text: "Não há estabilidade, pois esta se aplica apenas ao titular do cargo, e não a todos os diretores." },
+                    { label: "E", text: "14 de outubro de 2025, ou seja, até dois anos após o final do mandato." },
+                    { label: "F", text: "A estabilidade dura apenas enquanto ela estiver no exercício do mandato." },
+                ],
+                answer: "C",
+                justification: "A Constituição garante estabilidade provisória ao dirigente sindical para que ele possa exercer seu mandato sem perseguições. Essa estabilidade começa no momento do registro da candidatura e se estende por todo o mandato, continuando por mais um ano após o término do mandato. Portanto, a estabilidade de Joana vai até 14 de outubro de 2024.",
+                legalBasis: "Art. 8º, VIII, da Constituição Federal",
+                page: 78,
+                articleText: "VIII - é vedada a dispensa do empregado sindicalizado a partir do registro da candidatura a cargo de direção ou representação sindical e, se eleito, ainda que suplente, até um ano após o final do mandato, salvo se cometer falta grave nos termos da lei."
+            },
+            // Questão 61
+            {
+                id: 61,
+                question: "Em uma assembleia de trabalhadores de uma montadora de veículos, foi deliberado o início de uma greve para reivindicar melhores condições de segurança no trabalho e reajuste salarial. A decisão sobre a oportunidade de exercer o direito de greve e sobre os interesses que devam por meio dele defender compete:",
+                options: [
+                    { label: "A", text: "Exclusivamente ao sindicato da categoria, que detém o monopólio da representação." },
+                    { label: "B", text: "Aos trabalhadores." },
+                    { label: "C", text: "À Justiça do Trabalho, que deve autorizar previamente o início da greve." },
+                    { label: "D", text: "Ao Ministério Público do Trabalho, que atua como mediador." },
+                    { label: "E", text: "Ao empregador, em negociação com uma comissão de empregados." },
+                    { label: "F", text: "Ao governo, por meio do Ministério do Trabalho." },
+                ],
+                answer: "B",
+                justification: "A Constituição Federal é clara ao atribuir aos próprios trabalhadores a competência para decidir sobre a oportunidade de exercer o direito de greve e sobre quais interesses serão defendidos. O sindicato atua como representante, mas a titularidade do direito e da decisão é da categoria.",
+                legalBasis: "Art. 9º, caput, da Constituição Federal",
+                page: 79,
+                articleText: "Art. 9º É assegurado o direito de greve, competindo aos trabalhadores decidir sobre a oportunidade de exercê-lo e sobre os interesses que devam por meio dele defender."
+            },
+            // Questão 62
+            {
+                id: 62,
+                question: "A empresa \"Tecidos S.A.\" possui 250 empregados em sua fábrica. A Constituição Federal assegura que, em empresas com mais de duzentos empregados, seja eleito um representante destes. A finalidade exclusiva desse representante é:",
+                options: [
+                    { label: "A", text: "Fiscalizar o cumprimento das normas de segurança do trabalho." },
+                    { label: "B", text: "Negociar acordos salariais e de participação nos lucros." },
+                    { label: "C", text: "Promover o entendimento direto dos empregados com os empregadores." },
+                    { label: "D", text: "Representar os empregados em ações judiciais contra a empresa." },
+                    { label: "E", text: "Organizar e liderar movimentos grevistas." },
+                    { label: "F", text: "Atuar como membro do conselho de administração da empresa." },
+                ],
+                answer: "C",
+                justification: "A figura do representante dos empregados, prevista no Art. 11, tem como objetivo principal e exclusivo facilitar a comunicação e promover o entendimento direto entre os trabalhadores e a direção da empresa, funcionando como um canal de diálogo para resolver questões do dia a dia.",
+                legalBasis: "Art. 11 da Constituição Federal",
+                page: 81,
+                articleText: "Art. 11. Nas empresas de mais de duzentos empregados, é assegurada a eleição de um representante destes com a finalidade exclusiva de promover-lhes o entendimento direto com os empregadores."
+            },
+            // Questão 63
+            {
+                id: 63,
+                question: "Pierre, nascido em Paris, é filho de pai francês e mãe brasileira. À época do nascimento de Pierre, sua mãe não estava na França a serviço da República Federativa do Brasil. Para que Pierre seja considerado brasileiro nato, uma das condições previstas na Constituição é:",
+                options: [
+                    { label: "A", text: "Que ele resida no Brasil por, no mínimo, 4 anos ininterruptos." },
+                    { label: "B", text: "Que ele preste o serviço militar obrigatório no Brasil." },
+                    { label: "C", text: "Que ele seja registrado em repartição brasileira competente ou venha a residir no Brasil e opte, a qualquer tempo, após atingida a maioridade, pela nacionalidade brasileira." },
+                    { label: "D", text: "Que ele renuncie formalmente à nacionalidade francesa perante uma autoridade brasileira." },
+                    { label: "E", text: "Que sua mãe retorne ao Brasil e fixe residência permanente." },
+                    { label: "F", text: "Que ele se case com uma pessoa de nacionalidade brasileira nata." },
+                ],
+                answer: "C",
+                justification: "Este é um caso de nacionalidade pelo critério de sangue (jus sanguinis). Para o filho de brasileiro(a) nascido no exterior, quando o genitor não está a serviço do Brasil, há duas possibilidades para adquirir a nacionalidade nata: 1) ser registrado em repartição consular brasileira; ou 2) vir a residir no Brasil e, após atingir a maioridade, optar pela nacionalidade brasileira.",
+                legalBasis: "Art. 12, I, 'c', da Constituição Federal",
+                page: 82,
+                articleText: "c) os nascidos no estrangeiro de pai brasileiro ou de mãe brasileira, desde que sejam registrados em repartição brasileira competente ou venham a residir na República Federativa do Brasil e optem, em qualquer tempo, depois de atingida a maioridade, pela nacionalidade brasileira;"
+            },
+            // Questão 64
+            {
+                id: 64,
+                question: "Maria, nascida no Brasil, é filha de um casal de diplomatas japoneses que estavam em missão oficial no país na época de seu nascimento. De acordo com o critério jus soli e suas exceções constitucionais, Maria é considerada:",
+                options: [
+                    { label: "A", text: "Brasileira nata, pois nasceu em território brasileiro." },
+                    { label: "B", text: "Japonesa, pois seus pais, estrangeiros, estavam a serviço de seu país de origem." },
+                    { label: "C", text: "Brasileira naturalizada, se assim requerer após os 18 anos." },
+                    { label: "D", text: "Apátrida, até que opte pela nacionalidade brasileira ou japonesa." },
+                    { label: "E", text: "Brasileira nata, desde que seja registrada em cartório brasileiro." },
+                    { label: "F", text: "Japonesa, mas pode solicitar a nacionalidade brasileira ordinária após um ano de residência no Brasil." },
+                ],
+                answer: "B",
+                justification: "O Brasil adota como regra o critério do local de nascimento (jus soli). Contudo, a Constituição prevê uma exceção: os filhos de pais estrangeiros que estejam no Brasil a serviço de seu país de origem não serão considerados brasileiros natos, mesmo que nasçam aqui. Neste caso, Maria não é brasileira nata, mas japonesa.",
+                legalBasis: "Art. 12, I, 'a', da Constituição Federal",
+                page: 82,
+                articleText: "a) os nascidos na República Federativa do Brasil, ainda que de pais estrangeiros, desde que estes não estejam a serviço de seu país;"
+            },
+            // Questão 65
+            {
+                id: 65,
+                question: "Jean-Luc, cidadão francês, reside no Brasil há mais de 15 anos de forma ininterrupta, não possui nenhuma condenação penal e deseja se tornar brasileiro. Ele nunca se preocupou em aprender a língua portuguesa. De acordo com a Constituição Federal, Jean-Luc:",
+                options: [
+                    { label: "A", text: "Não pode se naturalizar, pois não é originário de país de língua portuguesa." },
+                    { label: "B", text: "Pode requerer a naturalização extraordinária, pois preenche os requisitos de residência por mais de 15 anos ininterruptos e ausência de condenação penal." },
+                    { label: "C", text: "Não pode se naturalizar, pois a fluência em língua portuguesa é um requisito para todas as formas de naturalização." },
+                    { label: "D", text: "Pode requerer a naturalização ordinária, que exige apenas 4 anos de residência." },
+                    { label: "E", text: "Só poderia se naturalizar se tivesse um filho brasileiro." },
+                    { label: "F", text: "Precisa comprovar idoneidade moral, o que não é o caso por não falar português." },
+                ],
+                answer: "B",
+                justification: "A naturalização extraordinária é concedida a estrangeiros de qualquer nacionalidade que preencham dois requisitos: residência ininterrupta no Brasil por mais de 15 anos e ausência de condenação penal. A Constituição não exige nenhum outro requisito para esta modalidade, como a proficiência em língua portuguesa, que é exigida apenas para a naturalização ordinária de estrangeiros de países de outra língua.",
+                legalBasis: "Art. 12, II, 'b', da Constituição Federal",
+                page: 83,
+                articleText: "b) os estrangeiros de qualquer nacionalidade, residentes na República Federativa do Brasil há mais de quinze anos ininterruptos e sem condenação penal, desde que requeiram a nacionalidade brasileira."
+            },
+            // Questão 66
+            {
+                id: 66,
+                question: "A Constituição Federal estabelece um rol de cargos que são privativos de brasileiros natos, visando à proteção de posições estratégicas do Estado. Assinale a alternativa que contém um cargo que PODE ser ocupado por um brasileiro naturalizado.",
+                options: [
+                    { label: "A", text: "Presidente do Senado Federal." },
+                    { label: "B", text: "Ministro do Supremo Tribunal Federal." },
+                    { label: "C", text: "Oficial das Forças Armadas." },
+                    { label: "D", text: "Ministro do Superior Tribunal de Justiça." },
+                    { label: "E", text: "Ministro de Estado da Defesa." },
+                    { label: "F", text: "Cargo da carreira diplomática." },
+                ],
+                answer: "D",
+                justification: "O cargo de Ministro do Superior Tribunal de Justiça (STJ) não está incluído no rol taxativo de cargos privativos de brasileiro nato, previsto no Art. 12, § 3º. Portanto, pode ser ocupado por um brasileiro naturalizado. Todos os outros cargos listados nas alternativas são privativos de brasileiro nato.",
+                legalBasis: "Art. 12, § 3º, da Constituição Federal",
+                page: 84,
+                articleText: "§ 3º São privativos de brasileiro nato os cargos: I - de Presidente e Vice-Presidente da República; II - de Presidente da Câmara dos Deputados; III - de Presidente do Senado Federal; IV - de Ministro do Supremo Tribunal Federal; V - da carreira diplomática; VI - de oficial das Forças Armadas; VII - de Ministro de Estado da Defesa."
+            },
+            // Questão 67
+            {
+                id: 67,
+                question: "Um brasileiro naturalizado, residente nos Estados Unidos, decide adquirir a cidadania norte-americana para facilitar sua vida profissional naquele país. A lei americana não exige a renúncia à nacionalidade de origem como condição para a naturalização. Nos termos da Constituição Federal, a aquisição voluntária de outra nacionalidade, nesse caso, acarretará a perda da nacionalidade brasileira?",
+                options: [
+                    { label: "A", text: "Sim, a aquisição voluntária de outra nacionalidade sempre acarreta a perda da nacionalidade brasileira." },
+                    { label: "B", text: "Não, pois a perda da nacionalidade só ocorrerá se houver um pedido expresso de perda formulado pelo brasileiro, e desde que isso não o torne apátrida." },
+                    { label: "C", text: "Sim, pois a dupla nacionalidade só é permitida para brasileiros natos." },
+                    { label: "D", text: "Não, pois a nacionalidade brasileira é irrenunciável." },
+                    { label: "E", text: "Sim, a menos que a outra nacionalidade adquirida seja de um país de língua portuguesa." },
+                    { label: "F", text: "Não, pois a perda da nacionalidade só ocorre em caso de cancelamento da naturalização por sentença judicial." },
+                ],
+                answer: "B",
+                justification: "Após a Emenda Constitucional nº 131/2023, a regra mudou. A perda da nacionalidade brasileira pela aquisição de outra não é mais automática. Ela só ocorrerá se o brasileiro fizer um pedido expresso de perda perante a autoridade brasileira competente, e mesmo assim, a perda não será concedida se resultar em apatridia (deixar a pessoa sem nenhuma nacionalidade). A regra antiga, que previa a perda automática com exceções, foi revogada.",
+                legalBasis: "Art. 12, § 4º, II, da Constituição Federal (com redação da EC 131/2023)",
+                page: 85,
+                articleText: "§ 4º Será declarada a perda da nacionalidade do brasileiro que: (...) II - fizer pedido expresso de perda da nacionalidade brasileira perante autoridade brasileira competente, ressalvadas as situações que acarretem apatridia."
+            },
+            // Questão 68
+            {
+                id: 68,
+                question: "A Constituição Federal, em seu Art. 13, estabelece quais são os símbolos da República Federativa do Brasil. Assinale a alternativa que os lista corretamente.",
+                options: [
+                    { label: "A", text: "A bandeira, o hino, as armas e o selo nacionais." },
+                    { label: "B", text: "A bandeira, o hino e a estátua do Cristo Redentor." },
+                    { label: "C", text: "Apenas a bandeira e o hino nacional." },
+                    { label: "D", text: "A bandeira, o hino, a capital Brasília e a língua portuguesa." },
+                    { label: "E", text: "A bandeira, o hino e o Presidente da República." },
+                    { label: "F", text: "As armas, o selo e o Palácio do Planalto." },
+                ],
+                answer: "A",
+                justification: "O Art. 13 da Constituição define de forma expressa e taxativa os quatro símbolos oficiais da República Federativa do Brasil: a bandeira, o hino, as armas e o selo nacionais.",
+                legalBasis: "Art. 13, § 1º, da Constituição Federal",
+                page: 86,
+                articleText: "§ 1º São símbolos da República Federativa do Brasil a bandeira, o hino, as armas e o selo nacionais."
+            },
+            // Questão 69
+            {
+                id: 69,
+                question: "O prefeito de uma cidade, ao inaugurar um hospital construído com recursos públicos, instalou uma grande placa na entrada com seu nome e sua foto, acompanhados da frase \"Um presente do prefeito João da Silva para a nossa cidade\". Essa prática viola diretamente qual princípio da administração pública expresso no Art. 37 da Constituição?",
+                options: [
+                    { label: "A", text: "Princípio da Legalidade." },
+                    { label: "B", text: "Princípio da Eficiência." },
+                    { label: "C", text: "Princípio da Moralidade." },
+                    { label: "D", text: "Princípio da Impessoalidade." },
+                    { label: "E", text: "Princípio da Publicidade." },
+                    { label: "F", text: "Princípio da Autotutela." },
+                ],
+                answer: "D",
+                justification: "O princípio da impessoalidade exige que a atuação da Administração Pública vise o interesse público, e não a promoção pessoal de agentes ou autoridades. A publicidade de atos, programas e obras governamentais deve ter caráter educativo, informativo ou de orientação social, sendo vedada a utilização de nomes, símbolos ou imagens que caracterizem promoção pessoal, como no caso descrito.",
+                legalBasis: "Art. 37, § 1º, da Constituição Federal",
+                page: 88,
+                articleText: "§ 1º A publicidade dos atos, programas, obras, serviços e campanhas dos órgãos públicos deverá ter caráter educativo, informativo ou de orientação social, dela não podendo constar nomes, símbolos ou imagens que caracterizem promoção pessoal de autoridades ou servidores públicos."
+            },
+            // Questão 70
+            {
+                id: 70,
+                question: "A Prefeitura de Rio Claro realizou um concurso público para o cargo de Escrevente, cujo edital previa validade de 1 ano. O concurso foi homologado em 10 de maio de 2022. Em 05 de maio de 2023, o Prefeito prorrogou a validade do concurso. Qual a data final de validade deste concurso?",
+                options: [
+                    { label: "A", text: "10 de maio de 2024." },
+                    { label: "B", text: "10 de maio de 2025." },
+                    { label: "C", text: "10 de maio de 2026." },
+                    { label: "D", text: "05 de maio de 2024." },
+                    { label: "E", text: "05 de maio de 2025." },
+                    { label: "F", text: "O concurso não poderia ser prorrogado." },
+                ],
+                answer: "A",
+                justification: "A Constituição estabelece que o prazo de validade do concurso público será de até 2 anos, prorrogável uma vez, por igual período. No caso, o prazo inicial era de 1 ano, terminando em 10 de maio de 2023. A prorrogação deve ser por 'igual período', ou seja, por mais 1 ano. Portanto, a validade final se estende até 10 de maio de 2024.",
+                legalBasis: "Art. 37, III, da Constituição Federal",
+                page: 89,
+                articleText: "III - o prazo de validade do concurso público será de até dois anos, prorrogável uma vez, por igual período;"
+            },
+            // Questão 71
+            {
+                id: 71,
+                question: "Na estrutura da Administração Pública, existem os cargos em comissão e as funções de confiança. De acordo com a Constituição Federal, as funções de confiança, destinadas às atribuições de direção, chefia e assessoramento, devem ser exercidas:",
+                options: [
+                    { label: "A", text: "Por qualquer pessoa, desde que tenha notória especialização." },
+                    { label: "B", text: "Exclusivamente por servidores ocupantes de cargo efetivo." },
+                    { label: "C", text: "Preferencialmente por servidores de carreira, mas abertas a não servidores." },
+                    { label: "D", text: "Apenas por servidores com, no mínimo, 5 anos de serviço público." },
+                    { label: "E", text: "Por pessoas indicadas politicamente pelo chefe do Poder." },
+                    { label: "F", text: "Por servidores concursados para aquele cargo específico." },
+                ],
+                answer: "B",
+                justification: "A Constituição faz uma distinção clara: enquanto os cargos em comissão podem ser preenchidos por servidores de carreira ou por pessoas de fora da administração, as funções de confiança são reservadas exclusivamente a servidores que já ocupam um cargo efetivo, ou seja, servidores concursados e estáveis.",
+                legalBasis: "Art. 37, V, da Constituição Federal",
+                page: 91,
+                articleText: "V - as funções de confiança, exercidas exclusivamente por servidores ocupantes de cargo efetivo, e os cargos em comissão, a serem preenchidos por servidores de carreira nos casos, condições e percentuais mínimos previstos em lei, destinam-se apenas às atribuições de direção, chefia e assessoramento;"
+            },
+            // Questão 72
+            {
+                id: 72,
+                question: "Os servidores da Receita Federal, após uma longa negociação salarial sem sucesso, decidem iniciar uma greve. O exercício do direito de greve no serviço público, conforme a Constituição Federal:",
+                options: [
+                    { label: "A", text: "É vedado a todos os servidores públicos civis." },
+                    { label: "B", text: "É exercido nos mesmos termos e limites do setor privado." },
+                    { label: "C", text: "Será exercido nos termos e nos limites definidos em lei específica." },
+                    { label: "D", text: "Depende de autorização prévia do Supremo Tribunal Federal." },
+                    { label: "E", text: "É permitido, mas os dias parados são automaticamente descontados sem direito a compensação." },
+                    { label: "F", text: "É permitido apenas para servidores do Poder Executivo." },
+                ],
+                answer: "C",
+                justification: "A Constituição assegura o direito de greve aos servidores públicos, mas estabelece que seu exercício ocorrerá nos termos e limites definidos em uma lei específica. Essa lei, de natureza complementar, ainda não foi editada, o que leva o STF a determinar, em mandados de injunção, a aplicação da lei de greve do setor privado (Lei nº 7.783/89) por analogia, até que a norma específica seja criada.",
+                legalBasis: "Art. 37, VII, da Constituição Federal",
+                page: 92,
+                articleText: "VII - o direito de greve será exercido nos termos e nos limites definidos em lei específica;"
+            },
+            // Questão 73
+            {
+                id: 73,
+                question: "Um edital de concurso público para um cargo de nível médio de uma autarquia federal reservou 2% das vagas para pessoas com deficiência. Um candidato, sentindo-se prejudicado, questiona o percentual. A Constituição Federal determina que a lei reservará um percentual dos cargos e empregos públicos para as pessoas com deficiência, e a definição desse percentual e dos critérios de admissão compete:",
+                options: [
+                    { label: "A", text: "À própria Constituição, que fixa o mínimo de 5%." },
+                    { label: "B", text: "A um decreto do Presidente da República." },
+                    { label: "C", text: "À lei." },
+                    { label: "D", text: "Ao edital de cada concurso, que tem discricionariedade para fixar o percentual." },
+                    { label: "E", text: "Ao Conselho Nacional de Justiça." },
+                    { label: "F", text: "À jurisprudência do Supremo Tribunal Federal." },
+                ],
+                answer: "C",
+                justification: "A Constituição garante a reserva de vagas, mas delega à lei a tarefa de definir o percentual a ser reservado e os critérios de admissão. A legislação federal (Lei nº 8.112/90) estabelece, por exemplo, um percentual de até 20%, e a jurisprudência consolidou um mínimo de 5%. No entanto, a competência para essa definição é da lei.",
+                legalBasis: "Art. 37, VIII, da Constituição Federal",
+                page: 92,
+                articleText: "VIII - a lei reservará percentual dos cargos e empregos públicos para as pessoas portadoras de deficiência e definirá os critérios de sua admissão;"
+            },
+            // Questão 74
+            {
+                id: 74,
+                question: "A remuneração dos servidores públicos do Poder Judiciário de um Estado foi reajustada por meio de uma resolução do Presidente do Tribunal de Justiça. Este ato é:",
+                options: [
+                    { label: "A", text: "Válido, pois o Presidente do Tribunal tem autonomia para gerir o orçamento e a remuneração de seus servidores." },
+                    { label: "B", text: "Inválido, pois a remuneração dos servidores públicos só pode ser fixada ou alterada por lei específica, de iniciativa do respectivo Poder." },
+                    { label: "C", text: "Válido, desde que a resolução seja aprovada pelo Tribunal de Contas do Estado." },
+                    { label: "D", text: "Inválido, pois o reajuste de servidores depende de decreto do Governador do Estado." },
+                    { label: "E", text: "Válido, pois resoluções têm força de lei para fins de reajuste salarial." },
+                    { label: "F", text: "Inválido, pois o reajuste geral anual depende de lei de iniciativa do Chefe do Poder Executivo." },
+                ],
+                answer: "B",
+                justification: "O princípio da legalidade estrita em matéria de remuneração de servidores públicos exige que qualquer fixação ou alteração de vencimentos seja feita por meio de lei específica. Embora a iniciativa da lei seja do próprio Poder Judiciário, o ato normativo deve ser uma 'lei' aprovada pelo Poder Legislativo, e não um ato administrativo como uma resolução.",
+                legalBasis: "Art. 37, X, da Constituição Federal",
+                page: 93,
+                articleText: "X - a remuneração dos servidores públicos e o subsídio de que trata o § 4º do art. 39 somente poderão ser fixados ou alterados por lei específica, observada a iniciativa privativa em cada caso, assegurada revisão geral anual, sempre na mesma data e sem distinção de índices;"
+            },
+            // Questão 75
+            {
+                id: 75,
+                question: "Em um pequeno município do interior, o subsídio do Prefeito é de R$ 12.000,00. O Secretário Municipal de Saúde, cujo cargo é remunerado por subsídio, recebe R$ 13.000,00. De acordo com as regras do teto remuneratório constitucional, a situação do Secretário é:",
+                options: [
+                    { label: "A", text: "Regular, pois o teto para Secretários é o subsídio dos Desembargadores do Tribunal de Justiça." },
+                    { label: "B", text: "Irregular, pois o teto remuneratório no âmbito do Poder Executivo Municipal é o subsídio do Prefeito." },
+                    { label: "C", text: "Regular, pois não há teto remuneratório para o cargo de Secretário Municipal." },
+                    { label: "D", text: "Irregular, pois o teto para todos os servidores municipais é o subsídio do Governador do Estado." },
+                    { label: "E", text: "Regular, desde que o valor seja aprovado por lei da Câmara de Vereadores." },
+                    { label: "F", text: "Irregular, pois o subsídio de um Secretário não pode ultrapassar 90,25% do subsídio do Prefeito." },
+                ],
+                answer: "B",
+                justification: "A Constituição estabelece subtetos remuneratórios para cada esfera de poder e ente federativo. No âmbito do Poder Executivo Municipal, o teto máximo para a remuneração de qualquer servidor, incluindo os Secretários, é o subsídio do Prefeito. Portanto, o Secretário não poderia receber mais que o Prefeito.",
+                legalBasis: "Art. 37, XI, da Constituição Federal",
+                page: 94,
+                articleText: "XI - a remuneração e o subsídio dos ocupantes de cargos, funções и empregos públicos (...) não poderão exceder o subsídio mensal, em espécie, dos Ministros do Supremo Tribunal Federal, aplicando-se como limite, nos Municípios, o subsídio do Prefeito (...)"
+            },
+            // Questão 76
+            {
+                id: 76,
+                question: "Qual das seguintes situações de acumulação remunerada de cargos públicos é permitida pela Constituição Federal, desde que haja compatibilidade de horários?",
+                options: [
+                    { label: "A", text: "Um cargo de Analista Judiciário (cargo técnico) com um cargo de Oficial de Justiça (cargo técnico)." },
+                    { label: "B", text: "Dois cargos de médico em hospitais públicos." },
+                    { label: "C", text: "Um cargo de professor com um cargo de Juiz de Direito." },
+                    { label: "D", text: "Um cargo de policial militar com um cargo de agente de trânsito municipal." },
+                    { label: "E", text: "Dois cargos em comissão de livre nomeação e exoneração." },
+                    { label: "F", text: "Um cargo de auditor fiscal com um cargo de consultor legislativo." },
+                ],
+                answer: "B",
+                justification: "A Constituição veda a acumulação remunerada de cargos públicos, mas estabelece exceções. Uma delas é a acumulação de dois cargos ou empregos privativos de profissionais de saúde, com profissões regulamentadas, como é o caso de dois cargos de médico.",
+                legalBasis: "Art. 37, XVI, 'c', da Constituição Federal",
+                page: 96,
+                articleText: "c) a de dois cargos ou empregos privativos de profissionais de saúde, com profissões regulamentadas;"
+            },
+            // Questão 77
+            {
+                id: 77,
+                question: "A proibição constitucional de acumular remuneradamente cargos, empregos e funções públicas estende-se a quais entidades da administração indireta?",
+                options: [
+                    { label: "A", text: "Apenas a autarquias e fundações públicas." },
+                    { label: "B", text: "Apenas a empresas públicas e sociedades de economia mista que prestam serviço público." },
+                    { label: "C", text: "A autarquias, fundações públicas, empresas públicas, sociedades de economia mista e suas subsidiárias." },
+                    { label: "D", text: "Apenas às entidades que dependem de recursos do Tesouro para custeio." },
+                    { label: "E", text: "A nenhuma, pois a vedação se aplica somente à administração direta." },
+                    { label: "F", text: "Apenas às fundações públicas de direito privado." },
+                ],
+                answer: "C",
+                justification: "A vedação à acumulação é ampla e abrange toda a estrutura da Administração Pública. O texto constitucional é explícito ao estender a proibição não apenas à administração direta, mas também às autarquias, fundações, empresas públicas e sociedades de economia mista, bem como às suas subsidiárias.",
+                legalBasis: "Art. 37, XVII, da Constituição Federal",
+                page: 97,
+                articleText: "XVII - a proibição de acumular estende-se a empregos e funções e abrange autarquias, fundações, empresas públicas, sociedades de economia mista, suas subsidiárias, e sociedades controladas, direta ou indiretamente, pelo poder público;"
+            },
+            // Questão 78
+            {
+                id: 78,
+                question: "O Governo Federal decidiu criar uma nova agência reguladora para fiscalizar o setor de inteligência artificial. O ato normativo necessário para a criação desta entidade, que terá natureza de autarquia, é:",
+                options: [
+                    { label: "A", text: "Um decreto do Presidente da República." },
+                    { label: "B", text: "Uma lei específica." },
+                    { label: "C", text: "Uma Medida Provisória." },
+                    { label: "D", text: "Uma lei complementar." },
+                    { label: "E", text: "Uma portaria interministerial." },
+                    { label: "F", text: "Uma resolução do Congresso Nacional." },
+                ],
+                answer: "B",
+                justification: "A criação de entidades da administração indireta, como autarquias, fundações, empresas públicas e sociedades de economia mista, depende de lei. No caso da autarquia, a própria lei a cria. Para as demais, a lei autoriza sua criação.",
+                legalBasis: "Art. 37, XIX, da Constituição Federal",
+                page: 98,
+                articleText: "XIX - somente por lei específica poderá ser criada autarquia e autorizada a instituição de empresa pública, de sociedade de economia mista e de fundação, cabendo à lei complementar, neste último caso, definir as áreas de sua atuação;"
+            },
+            // Questão 79
+            {
+                id: 79,
+                question: "Um Secretário de Estado, ao final de sua gestão, veiculou uma campanha publicitária em rádio e televisão mostrando as obras realizadas em sua pasta, com seu rosto em destaque e o slogan \"Fulano de Tal, o secretário que mais fez por você\". Tal publicidade é:",
+                options: [
+                    { label: "A", text: "Legal, pois a publicidade dos atos governamentais é um dever da administração." },
+                    { label: "B", text: "Ilegal, pois a publicidade de atos e obras públicas não pode conter nomes, símbolos ou imagens que caracterizem promoção pessoal de autoridades." },
+                    { label: "C", text: "Legal, desde que os custos da campanha não ultrapassem o limite previsto na lei orçamentária." },
+                    { label: "D", text: "Ilegal, pois a publicidade governamental só pode ser veiculada em meios de comunicação impressos." },
+                    { label: "E", text: "Legal, pois tem caráter informativo ao mostrar à população as obras realizadas." },
+                    { label: "F", text: "Ilegal, pois apenas o Chefe do Poder Executivo pode autorizar campanhas publicitárias." },
+                ],
+                answer: "B",
+                justification: "Essa é uma violação clara do princípio da impessoalidade. A publicidade de atos do governo deve ser informativa, educativa ou de orientação social, mas é expressamente vedado que contenha nomes, símbolos ou imagens que caracterizem a promoção pessoal da autoridade, como no exemplo.",
+                legalBasis: "Art. 37, § 1º, da Constituição Federal",
+                page: 88,
+                articleText: "§ 1º A publicidade dos atos, programas, obras, serviços e campanhas dos órgãos públicos deverá ter caráter educativo, informativo ou de orientação social, dela não podendo constar nomes, símbolos ou imagens que caracterizem promoção pessoal de autoridades ou servidores públicos."
+            },
+            // Questão 80
+            {
+                id: 80,
+                question: "Um prefeito foi condenado por ato de improbidade administrativa que causou enorme prejuízo ao erário. Entre as sanções previstas na Constituição Federal para os atos de improbidade administrativa, NÃO se inclui:",
+                options: [
+                    { label: "A", text: "A suspensão dos direitos políticos." },
+                    { label: "B", text: "A perda da função pública." },
+                    { label: "C", text: "A indisponibilidade dos bens." },
+                    { label: "D", text: "O ressarcimento integral do dano." },
+                    { label: "E", text: "A cassação dos direitos políticos." },
+                    { label: "F", text: "O pagamento de multa civil." },
+                ],
+                answer: "E",
+                justification: "A Constituição prevê a 'suspensão' dos direitos políticos como sanção por improbidade, e não a 'cassação', que é uma penalidade mais drástica e vedada. A indisponibilidade dos bens e a multa civil, embora não listadas no § 4º, são previstas na legislação que regulamenta o artigo, sendo constitucionais.",
+                legalBasis: "Art. 37, § 4º, da Constituição Federal",
+                page: 100,
+                articleText: "§ 4º Os atos de improbidade administrativa importarão a suspensão dos direitos políticos, a perda da função pública, a indisponibilidade dos bens e o ressarcimento ao erário, na forma e gradação previstas em lei, sem prejuízo da ação penal cabível."
+            },
+            // Questão 81
+            {
+                id: 81,
+                question: "Um ônibus de uma empresa concessionária de serviço público de transporte municipal se envolveu em um acidente, ferindo gravemente um passageiro, Pedro. Para que Pedro seja indenizado pela empresa, ele precisará comprovar:",
+                options: [
+                    { label: "A", text: "Apenas o dano sofrido e o nexo de causalidade entre o dano e o serviço prestado, pois a responsabilidade da concessionária é objetiva." },
+                    { label: "B", text: "O dano, o nexo de causalidade e a culpa ou dolo do motorista do ônibus, pois a responsabilidade é subjetiva." },
+                    { label: "C", text: "Apenas que era um passageiro, pois a responsabilidade é objetiva e o dano é presumido." },
+                    { label: "D", text: "Que a empresa não agiu com a devida diligência na manutenção do veículo." },
+                    { label: "E", text: "A responsabilidade da empresa é subsidiária, devendo primeiro acionar o motorista." },
+                    { label: "F", text: "A responsabilidade é do Município, e não da empresa concessionária." },
+                ],
+                answer: "A",
+                justification: "A responsabilidade civil do Estado e das pessoas jurídicas de direito privado prestadoras de serviços públicos (como a concessionária de transporte) é objetiva, na modalidade do risco administrativo. Isso significa que, para o usuário do serviço ser indenizado, basta que ele comprove a conduta (a prestação do serviço), o dano sofrido e o nexo de causalidade entre eles, não sendo necessário provar culpa ou dolo do agente.",
+                legalBasis: "Art. 37, § 6º, da Constituição Federal",
+                page: 101,
+                articleText: "§ 6º As pessoas jurídicas de direito público e as de direito privado prestadoras de serviços públicos responderão pelos danos que seus agentes, nessa qualidade, causarem a terceiros, assegurado o direito de regresso contra o responsável nos casos de dolo ou culpa."
+            },
+            // Questão 82
+            {
+                id: 82,
+                question: "A União, os Estados e o Distrito Federal devem manter escolas de governo para a formação e o aperfeiçoamento dos servidores públicos. A Constituição estabelece que a participação nos cursos oferecidos por essas escolas constitui um dos requisitos para:",
+                options: [
+                    { label: "A", text: "A nomeação para cargos em comissão." },
+                    { label: "B", text: "A aquisição da estabilidade no serviço público." },
+                    { label: "C", text: "A concessão de licença-prêmio." },
+                    { label: "D", text: "A promoção na carreira." },
+                    { label: "E", text: "O recebimento de abono de permanência." },
+                    { label: "F", text: "A aposentadoria voluntária." },
+                ],
+                answer: "D",
+                justification: "A Constituição incentiva a qualificação contínua do servidor público, estabelecendo que a participação nos cursos das escolas de governo é um requisito para a promoção na carreira. A promoção é a passagem do servidor para um nível mais elevado dentro da mesma carreira, geralmente com aumento de remuneração.",
+                legalBasis: "Art. 39, § 2º, da Constituição Federal",
+                page: 103,
+                articleText: "§ 2º A União, os Estados e o Distrito Federal manterão escolas de governo para a formação e o aperfeiçoamento dos servidores públicos, constituindo-se a participação nos cursos um dos requisitos para a promoção na carreira, facultada, para isso, a celebração de convênios ou contratos entre os entes federados."
+            },
+            // Questão 83
+            {
+                id: 83,
+                question: "Joana foi nomeada para ocupar um cargo exclusivamente em comissão na prefeitura de sua cidade, de livre nomeação e exoneração. Em relação ao seu regime de previdência, Joana estará vinculada:",
+                options: [
+                    { label: "A", text: "Ao Regime Próprio de Previdência Social (RPPS) do município." },
+                    { label: "B", text: "Ao Regime Geral de Previdência Social (RGPS)." },
+                    { label: "C", text: "A um regime de previdência complementar, de forma obrigatória." },
+                    { label: "D", text: "A nenhum regime, pois não tem direito à aposentadoria." },
+                    { label: "E", text: "Ao mesmo regime dos militares." },
+                    { label: "F", text: "A um regime especial a ser definido em lei municipal." },
+                ],
+                answer: "B",
+                justification: "O Regime Próprio de Previdência Social (RPPS) é destinado exclusivamente aos servidores titulares de cargo efetivo. Os servidores que ocupam exclusivamente cargos em comissão, por não terem vínculo efetivo, são obrigatoriamente vinculados ao Regime Geral de Previdência Social (RGPS), administrado pelo INSS, o mesmo regime dos trabalhadores da iniciativa privada.",
+                legalBasis: "Art. 40, § 13, da Constituição Federal",
+                page: 110,
+                articleText: "§ 13. Ao servidor ocupante, exclusivamente, de cargo em comissão declarado em lei de livre nomeação e exoneração (...) aplica-se o Regime Geral de Previdência Social."
+            },
+            // Questão 84
+            {
+                id: 84,
+                question: "Marcos foi aprovado em concurso público para um cargo de provimento efetivo e tomou posse em 10 de março de 2021. De acordo com a Constituição Federal, ele adquirirá estabilidade no serviço público em:",
+                options: [
+                    { label: "A", text: "10 de março de 2023, após dois anos de efetivo exercício." },
+                    { label: "B", text: "10 de março de 2024, após três anos de efetivo exercício." },
+                    { label: "C", text: "10 de março de 2026, após cinco anos de efetivo exercício." },
+                    { label: "D", text: "Após a aprovação na avaliação especial de desempenho, independentemente do tempo." },
+                    { label: "E", text: "Após a homologação do estágio probatório, que dura 24 meses." },
+                    { label: "F", text: "A estabilidade foi extinta pela reforma administrativa." },
+                ],
+                answer: "B",
+                justification: "A Emenda Constitucional nº 19/1998 alterou o prazo para aquisição da estabilidade no serviço público de dois para três anos de efetivo exercício. Portanto, Marcos, que tomou posse em 10 de março de 2021, adquirirá estabilidade em 10 de março de 2024.",
+                legalBasis: "Art. 41, caput, da Constituição Federal",
+                page: 115,
+                articleText: "Art. 41. São estáveis após três anos de efetivo exercício os servidores nomeados para cargo de provimento efetivo в virtude de concurso público."
+            },
+            // Questão 85
+            {
+                id: 85,
+                question: "Um servidor público estável poderá perder o cargo, entre outras hipóteses, mediante:",
+                options: [
+                    { label: "A", text: "Decisão de seu superior hierárquico, por insuficiência de desempenho, sem necessidade de processo." },
+                    { label: "B", text: "Sentença judicial transitada em julgado." },
+                    { label: "C", text: "Ato administrativo discricionário do chefe do Poder." },
+                    { label: "D", text: "Reprovação em avaliação de desempenho, mesmo que não lhe seja assegurada ampla defesa." },
+                    { label: "E", text: "Simples extinção do seu cargo, sendo automaticamente exonerado." },
+                    { label: "F", text: "Pedido do Ministério Público, em qualquer situação." },
+                ],
+                answer: "B",
+                justification: "A estabilidade não é uma garantia absoluta. A Constituição prevê um rol taxativo de hipóteses para a perda do cargo pelo servidor estável. Uma delas é em virtude de uma sentença judicial da qual não caiba mais recurso (transitada em julgado).",
+                legalBasis: "Art. 41, § 1º, I, da Constituição Federal",
+                page: 115,
+                articleText: "§ 1º O servidor público estável só perderá o cargo: I - em virtude de sentença judicial transitada em julgado;"
+            },
+            // Questão 86
+            {
+                id: 86,
+                question: "A demissão de um servidor estável, Mário, foi invalidada por sentença judicial. Ele foi, então, reintegrado ao seu cargo. A vaga, no entanto, estava ocupada por Lúcia, que também era servidora estável. Neste caso, Lúcia deverá ser:",
+                options: [
+                    { label: "A", text: "Exonerada, pois a vaga pertence a Mário." },
+                    { label: "B", text: "Demitida por conveniência da administração." },
+                    { label: "C", text: "Aposentada compulsoriamente, com proventos proporcionais." },
+                    { label: "D", text: "Reconduzida ao seu cargo de origem, aproveitada em outro cargo ou posta em disponibilidade com remuneração proporcional." },
+                    { label: "E", text: "Transferida para outra secretaria, com direito a uma indenização." },
+                    { label: "F", text: "Mantida no cargo junto com Mário, que ficará como excedente." },
+                ],
+                answer: "D",
+                justification: "Quando um servidor é reintegrado, o eventual ocupante da vaga, se estável, não é simplesmente exonerado. A Constituição prevê uma ordem de medidas: primeiro, tenta-se a recondução ao cargo de origem; se não for possível, ele será aproveitado em outro cargo compatível; e, em último caso, será colocado em disponibilidade com remuneração proporcional ao tempo de serviço.",
+                legalBasis: "Art. 41, § 2º, da Constituição Federal",
+                page: 116,
+                articleText: "§ 2º Invalidada por sentença judicial a demissão do servidor estável, será ele reintegrado, e o eventual ocupante da vaga, se estável, reconduzido ao cargo de origem, sem direito a indenização, aproveitado em outro cargo ou posto em disponibilidade com remuneração proporcional ao tempo de serviço."
+            },
+            // Questão 87
+            {
+                id: 87,
+                question: "Além do cumprimento do período de três anos de efetivo exercício, a aquisição da estabilidade pelo servidor nomeado para cargo de provimento efetivo está condicionada a um requisito obrigatório. Qual é este requisito?",
+                options: [
+                    { label: "A", text: "Conclusão de curso de pós-graduação na área de atuação." },
+                    { label: "B", text: "Avaliação especial de desempenho por comissão instituída para essa finalidade." },
+                    { label: "C", text: "Aprovação em um novo concurso público de promoção." },
+                    { label: "D", text: "Ausência de qualquer tipo de falta administrativa durante o período." },
+                    { label: "E", text: "Filiação ao sindicato da categoria." },
+                    { label: "F", text: "Apresentação de declaração de bens a cada seis meses." },
+                ],
+                answer: "B",
+                justification: "A estabilidade não é adquirida de forma automática apenas com o decurso do tempo. A Constituição estabelece o estágio probatório como um período de avaliação e exige, como condição para a aquisição da estabilidade, a aprovação em uma avaliação especial de desempenho, realizada por uma comissão específica.",
+                legalBasis: "Art. 41, § 4º, da Constituição Federal",
+                page: 117,
+                articleText: "§ 4º Como condição para a aquisição da estabilidade, é obrigatória a avaliação especial de desempenho por comissão instituída para essa finalidade."
+            },
+            // Questão 88
+            {
+                id: 88,
+                question: "A Constituição Federal, em seu Art. 92, elenca os órgãos que compõem o Poder Judiciário. Qual das alternativas abaixo apresenta um órgão que NÃO integra o Poder Judiciário?",
+                options: [
+                    { label: "A", text: "O Superior Tribunal de Justiça." },
+                    { label: "B", text: "Os Tribunais e Juízes Eleitorais." },
+                    { label: "C", text: "O Tribunal de Contas da União." },
+                    { label: "D", text: "O Conselho Nacional de Justiça." },
+                    { label: "E", text: "Os Tribunais e Juízes Militares." },
+                    { label: "F", text: "Os Tribunais Regionais Federais e Juízes Federais." },
+                ],
+                answer: "C",
+                justification: "Apesar do nome, o Tribunal de Contas da União (TCU) não pertence ao Poder Judiciário. Ele é um órgão de controle externo que auxilia o Poder Legislativo na fiscalização contábil, financeira, orçamentária, operacional e patrimonial da União. O Conselho Nacional de Justiça, por sua vez, foi incluído no rol de órgãos do Judiciário pela EC nº 45/2004.",
+                legalBasis: "Art. 92 da Constituição Federal",
+                page: 118,
+                articleText: "Art. 92. São órgãos do Poder Judiciário: I - o Supremo Tribunal Federal; I-A - o Conselho Nacional de Justiça; II - o Superior Tribunal de Justiça; (...) [lista os demais órgãos, não incluindo o Tribunal de Contas]."
+            },
+            // Questão 89
+            {
+                id: 89,
+                question: "O direito de propriedade não é absoluto, devendo atender à sua função social. No caso de uma grande propriedade rural que seja comprovadamente improdutiva, a Constituição prevê uma consequência específica, que é a possibilidade de:",
+                options: [
+                    { label: "A", text: "Desapropriação para fins de reforma agrária, mediante prévia e justa indenização em dinheiro." },
+                    { label: "B", text: "Desapropriação para fins de reforma agrária, mediante indenização em títulos da dívida agrária." },
+                    { label: "C", text: "Perda automática da propriedade para a União, sem qualquer indenização." },
+                    { label: "D", text: "Requisição administrativa da terra para cultivo temporário pelo Estado." },
+                    { label: "E", text: "Aumento progressivo do Imposto sobre a Propriedade Territorial Rural (ITR) até a venda do imóvel." },
+                    { label: "F", text: "Tombamento da propriedade como patrimônio histórico." },
+                ],
+                answer: "B",
+                justification: "Esta é a chamada 'desapropriação-sanção'. Quando a propriedade rural não cumpre sua função social, ela fica sujeita à desapropriação pela União para fins de reforma agrária. A indenização, neste caso, não segue a regra geral (dinheiro), sendo paga em títulos da dívida agrária, resgatáveis em até 20 anos. As benfeitorias úteis e necessárias, no entanto, são indenizadas em dinheiro.",
+                legalBasis: "Art. 184 da Constituição Federal",
+                page: 119,
+                articleText: "Art. 184. Compete à União desapropriar por interesse social, para fins de reforma agrária, o imóvel rural que não esteja cumprindo sua função social, mediante prévia e justa indenização em títulos da dívida agrária, com cláusula de preservação do valor real, resgatáveis no prazo de até vinte anos, a partir do segundo ano de sua emissão, e cuja utilização será definida em lei."
+            },
+            // Questão 90
+            {
+                id: 90,
+                question: "A liberdade de locomoção no território nacional em tempo de paz é um direito fundamental. No entanto, a Constituição permite que a lei estabeleça certas restrições. Qual das situações abaixo representa uma restrição legítima a esse direito?",
+                options: [
+                    { label: "A", text: "Um decreto municipal que proíbe a circulação de pessoas não residentes na cidade durante feriados prolongados." },
+                    { label: "B", text: "Uma portaria de um condomínio que proíbe a entrada de entregadores de comida após as 22h." },
+                    { label: "C", text: "Uma lei federal que exige a apresentação de comprovante de vacinação contra determinada doença para o embarque em voos domésticos, durante uma emergência de saúde pública." },
+                    { label: "D", text: "Uma ordem judicial que proíbe um cidadão de sair de seu estado de residência por ter dívidas fiscais." },
+                    { label: "E", text: "Uma decisão administrativa que impede um ativista político de se aproximar de prédios públicos." },
+                    { label: "F", text: "Uma lei estadual que cria pedágios para entrar ou sair de seu território." },
+                ],
+                answer: "C",
+                justification: "O direito de locomoção não é absoluto. Ele pode ser ponderado com outros direitos fundamentais, como o direito à saúde e à vida (art. 6º e 196). O STF já decidiu que, em situações de emergência sanitária, uma lei federal pode impor restrições à locomoção, como a exigência de comprovante de vacinação, como medida de proteção da saúde coletiva.",
+                legalBasis: "Art. 5º, XV, da Constituição Federal",
+                page: 17,
+                articleText: "XV - é livre a locomoção no território nacional em tempo de paz, podendo qualquer pessoa, nos termos da lei, nele entrar, permanecer ou dele sair com seus bens;"
+            },
+            // Questão 91
+            {
+                id: 91,
+                question: "Um grupo de agricultores familiares decide criar uma cooperativa para comprar insumos em conjunto e vender sua produção de forma mais competitiva. De acordo com a Constituição Federal, a criação de cooperativas:",
+                options: [
+                    { label: "A", text: "Depende de autorização prévia do Ministério da Agricultura." },
+                    { label: "B", text: "É livre, na forma da lei, e independe de autorização, sendo vedada a interferência estatal em seu funcionamento." },
+                    { label: "C", text: "Depende de lei específica para cada cooperativa criada." },
+                    { label: "D", text: "É livre, mas o Estado pode intervir em seu funcionamento para garantir o equilíbrio econômico." },
+                    { label: "E", text: "Só é permitida para atividades rurais, sendo vedada em áreas urbanas." },
+                    { label: "F", text: "Exige um capital social mínimo definido pelo Banco Central." },
+                ],
+                answer: "B",
+                justification: "Assim como os sindicatos e associações, as cooperativas gozam do princípio da liberdade. Sua criação independe de autorização do Estado, devendo apenas seguir os requisitos da lei. A Constituição também veda expressamente a interferência estatal em seu funcionamento, garantindo sua autonomia.",
+                legalBasis: "Art. 5º, XVIII, da Constituição Federal",
+                page: 20,
+                articleText: "XVIII - a criação de associações e, na forma da lei, a de cooperativas independem de autorização, sendo vedada a interferência estatal em seu funcionamento;"
+            },
+            // Questão 92
+            {
+                id: 92,
+                question: "A polícia, investigando um crime de sequestro, solicita a uma empresa de telefonia o acesso aos registros das chamadas efetuadas e recebidas pela vítima e pelo principal suspeito. A empresa se nega a fornecer os dados sem a devida autorização. A quebra do sigilo das comunicações telefônicas, segundo a Constituição, só pode ocorrer:",
+                options: [
+                    { label: "A", text: "Por ordem da autoridade policial, em qualquer fase da investigação." },
+                    { label: "B", text: "Por ordem judicial, nas hipóteses e na forma que a lei estabelecer, para fins de investigação criminal ou instrução processual penal." },
+                    { label: "C", text: "Por determinação do Ministério Público, que é o titular da ação penal." },
+                    { label: "D", text: "Por ordem do Ministro da Justiça, em casos de segurança nacional." },
+                    { label: "E", text: "Por ordem judicial, para qualquer finalidade, incluindo investigações cíveis ou administrativas." },
+                    { label: "F", text: "Com o consentimento de um dos interlocutores, o que torna a gravação lícita em qualquer situação." },
+                ],
+                answer: "B",
+                justification: "A inviolabilidade das comunicações telefônicas é uma garantia fundamental, mas pode ser relativizada. A Constituição estabelece requisitos rígidos para isso: 1) deve haver uma ordem judicial (reserva de jurisdição); 2) deve ser para fins específicos de investigação criminal ou instrução processual penal; e 3) deve ocorrer nas hipóteses e na forma que a lei estabelecer.",
+                legalBasis: "Art. 5º, XII, da Constituição Federal",
+                page: 13,
+                articleText: "XII - é inviolável o sigilo da correspondência e das comunicações telegráficas, de dados e das comunicações telefônicas, salvo, no último caso, por ordem judicial, nas hipóteses e na forma que a lei estabelecer para fins de investigação criminal ou instrução processual penal;"
+            },
+            // Questão 93
+            {
+                id: 93,
+                question: "Uma jornalista recebe de uma fonte anônima documentos que comprovam um esquema de desvio de verbas em um ministério. Ela publica a matéria, que tem grande repercussão. A autoridade policial, ao investigar o vazamento dos documentos, intima a jornalista para que ela revele a identidade de sua fonte. De acordo com a Constituição Federal, a jornalista:",
+                options: [
+                    { label: "A", text: "É obrigada a revelar a fonte, pois a vedação ao anonimato se aplica a todos." },
+                    { label: "B", text: "Tem o direito de ter o sigilo da fonte resguardado, pois é uma garantia necessária ao seu exercício profissional." },
+                    { label: "C", text: "Só pode manter o sigilo se a fonte for outro agente público." },
+                    { label: "D", text: "É obrigada a revelar a fonte, a menos que a informação seja de interesse exclusivo do Presidente da República." },
+                    { label: "E", text: "Tem o direito de manter o sigilo, mas a matéria publicada será considerada prova ilícita." },
+                    { label: "F", text: "Não tem direito ao sigilo da fonte, pois este direito foi revogado pela lei de imprensa." },
+                ],
+                answer: "B",
+                justification: "Para garantir a liberdade de imprensa e o acesso da sociedade a informações de interesse público, a Constituição assegura aos jornalistas o direito de resguardar o sigilo da fonte, quando isso for necessário ao exercício de sua profissão. Isso protege tanto o jornalista quanto a fonte, incentivando a denúncia de irregularidades.",
+                legalBasis: "Art. 5º, XIV, da Constituição Federal",
+                page: 16,
+                articleText: "XIV - é assegurado a todos o acesso à informação e resguardado o sigilo da fonte, quando necessário ao exercício profissional;"
+            },
+            // Questão 94
+            {
+                id: 94,
+                question: "Um grupo de cidadãos planeja uma manifestação pacífica em uma avenida importante da cidade. Eles comunicam a autoridade competente com antecedência. No entanto, um outro grupo, com pautas antagônicas, decide convocar uma contramanifestação para o mesmo local e horário, também comunicando a autoridade. A Constituição estabelece que o direito de reunião não pode frustrar outra reunião anteriormente convocada para o mesmo local. Nesse caso, a autoridade competente deve:",
+                options: [
+                    { label: "A", text: "Proibir ambas as manifestações para evitar conflitos." },
+                    { label: "B", text: "Autorizar a manifestação que foi comunicada primeiro e garantir sua realização." },
+                    { label: "C", text: "Autorizar ambas, mas em locais diferentes ou horários alternados para garantir o direito de todos." },
+                    { label: "D", text: "Sortear qual das duas manifestações poderá ocorrer." },
+                    { label: "E", text: "Autorizar a manifestação que tiver maior número de participantes previsto." },
+                    { label: "F", text: "Proibir a segunda manifestação, mas permitir que ela ocorra em qualquer outro dia, sem necessidade de novo aviso." },
+                ],
+                answer: "C",
+                justification: "A resposta mais alinhada com a ponderação de direitos fundamentais é a C. Embora a Constituição dê preferência à reunião comunicada primeiro (opção B), a autoridade pública, ao invés de simplesmente proibir a segunda, deve tentar conciliar os direitos de ambos os grupos, por exemplo, designando locais próximos ou horários distintos. A proibição total de ambas (A) seria uma restrição excessiva ao direito de reunião.",
+                legalBasis: "Art. 5º, XVI, da Constituição Federal",
+                page: 18,
+                articleText: "XVI - todos podem reunir-se pacificamente, sem armas, em locais abertos ao público, independentemente de autorização, desde que não frustrem outra reunião anteriormente convocada para o mesmo local, sendo apenas exigido prévio aviso à autoridade competente;"
+            },
+            // Questão 95
+            {
+                id: 95,
+                question: "A Constituição Federal assegura, nos termos da lei, a prestação de assistência religiosa em certas entidades. Qual das alternativas abaixo corresponde a essa previsão?",
+                options: [
+                    { label: "A", text: "Em todas as repartições públicas, durante o horário de expediente." },
+                    { label: "B", text: "Apenas em hospitais da rede pública de saúde." },
+                    { label: "C", text: "Nas entidades civis e militares de internação coletiva, como presídios e quartéis." },
+                    { label: "D", text: "Em escolas públicas do ensino fundamental e médio." },
+                    { label: "E", text: "Apenas em estabelecimentos prisionais femininos." },
+                    { label: "F", text: "Em qualquer local público, desde que haja um grupo mínimo de fiéis." },
+                ],
+                answer: "C",
+                justification: "Visando garantir a liberdade religiosa mesmo para aqueles que estão com sua liberdade de locomoção restrita, a Constituição assegura a prestação de assistência religiosa em locais de internação coletiva, tanto civis (hospitais, asilos, presídios) quanto militares (quartéis, hospitais militares).",
+                legalBasis: "Art. 5º, VII, da Constituição Federal",
+                page: 8,
+                articleText: "VII - é assegurada, nos termos da lei, a prestação de assistência religiosa nas entidades civis e militares de internação coletiva;"
+            },
+            // Questão 96
+            {
+                id: 96,
+                question: "Caio, por convicção filosófica pacifista, se recusa a prestar o serviço militar obrigatório. A lei prevê, para casos como o dele, a prestação de um serviço alternativo de caráter civil em um hospital público. Caio também se recusa a cumprir a prestação alternativa. Qual é a consequência constitucional para essa dupla recusa?",
+                options: [
+                    { label: "A", text: "Prisão por crime de desobediência, com pena de 1 a 2 anos." },
+                    { label: "B", text: "Perda da nacionalidade brasileira." },
+                    { label: "C", text: "Nenhuma, pois a liberdade de convicção filosófica é absoluta." },
+                    { label: "D", text: "Multa pecuniária e inelegibilidade por 8 anos." },
+                    { label: "E", text: "Terá seus direitos políticos suspensos." },
+                    { label: "F", text: "Perda do direito de se inscrever em concursos públicos." },
+                ],
+                answer: "E",
+                justification: "A liberdade de consciência e crença é protegida, mas não isenta ninguém de cumprir obrigações legais impostas a todos. Se alguém, por escusa de consciência, se recusar a cumprir uma obrigação (serviço militar) e também se negar a cumprir a prestação alternativa fixada em lei, a consequência prevista na Constituição é a suspensão de seus direitos políticos.",
+                legalBasis: "Art. 15, IV, da Constituição Federal",
+                page: 9,
+                articleText: "Art. 15. É vedada a cassação de direitos políticos, cuja perda ou suspensão só se dará nos casos de: (...) IV - recusa de cumprir obrigação a todos imposta ou prestação alternativa, nos termos do art. 5º, VIII;"
+            },
+            // Questão 97
+            {
+                id: 97,
+                question: "Uma companhia de teatro pretende encenar uma peça com forte crítica política и social. Para poder apresentar a peça ao público, a companhia precisa:",
+                options: [
+                    { label: "A", text: "Submeter o roteiro à aprovação prévia de um conselho de censura do Ministério da Cultura." },
+                    { label: "B", text: "Obter uma licença específica da prefeitura da cidade onde a peça será exibida." },
+                    { label: "C", text: "De nada, pois a expressão da atividade artística independe de censura ou licença." },
+                    { label: "D", text: "Obter uma autorização judicial que ateste que a peça не ofende a moral e os bons costumes." },
+                    { label: "E", text: "Registrar a peça na Biblioteca Nacional e pagar uma taxa de exibição." },
+                    { label: "F", text: "Apresentar a peça apenas para maiores de 18 anos, independentemente de seu conteúdo." },
+                ],
+                answer: "C",
+                justification: "A Constituição Federal de 1988, em uma clara ruptura com o regime anterior, assegura a plena liberdade de expressão da atividade artística, intelectual, científica e de comunicação, vedando expressamente qualquer forma de censura ou a necessidade de licença prévia para o seu exercício.",
+                legalBasis: "Art. 5º, IX, da Constituição Federal",
+                page: 10,
+                articleText: "IX - é livre a expressão da atividade intelectual, artística, científica e de comunicação, independentemente de censura ou licença;"
+            },
+            // Questão 98
+            {
+                id: 98,
+                question: "O direito de herança é uma garantia fundamental. Isso significa que a transmissão do patrimônio de uma pessoa falecida aos seus sucessores:",
+                options: [
+                    { label: "A", text: "É isenta de qualquer imposto, por ser um direito fundamental." },
+                    { label: "B", text: "Ocorrerá nos termos da lei civil, que define a ordem de vocação hereditária e os direitos dos herdeiros." },
+                    { label: "C", text: "Pode ser livremente disposta em testamento, mesmo que existam herdeiros necessários como filhos e cônjuge." },
+                    { label: "D", text: "É um direito absoluto, não podendo ser limitado por dívidas deixadas pelo falecido." },
+                    { label: "E", text: "Só se aplica a bens imóveis, não abrangendo bens móveis ou valores financeiros." },
+                    { label: "F", text: "Será sempre regulada pela lei vigente na data da abertura do testamento, e não na data da morte." },
+                ],
+                answer: "B",
+                justification: "Ao garantir o direito de herança, a Constituição estabelece que a forma como essa transmissão ocorrerá será regulada pela lei (no caso, o Código Civil). A lei civil define quem são os herdeiros, a ordem em que herdam, a proteção da parte legítima dos herdeiros necessários, etc. O direito não é absoluto e está sujeito a tributação (ITCMD) e ao pagamento das dívidas do falecido, nos limites da herança.",
+                legalBasis: "Art. 5º, XXX, da Constituição Federal",
+                page: 27,
+                articleText: "XXX - é garantido o direito de herança;"
+            },
+            // Questão 99
+            {
+                id: 99,
+                question: "O princípio da inafastabilidade da jurisdição, previsto no Art. 5º, XXXV, da Constituição, estabelece que \"a lei não excluirá da apreciação do Poder Judiciário lesão ou ameaça a direito\". Isso significa que:",
+                options: [
+                    { label: "A", text: "Todas as disputas devem, obrigatoriamente, ser resolvidas pelo Poder Judiciário." },
+                    { label: "B", text: "É necessário esgotar as vias administrativas antes de poder recorrer ao Judiciário." },
+                    { label: "C", text: "Qualquer pessoa pode levar uma lesão ou ameaça de lesão a seu direito ao conhecimento de um juiz, não podendo a lei criar obstáculos a esse acesso." },
+                    { label: "D", text: "O Poder Judiciário pode atuar de ofício, sem provocação das partes, para resolver conflitos." },
+                    { label: "E", text: "Apenas questões de natureza penal podem ser levadas ao Judiciário." },
+                    { label: "F", text: "As decisões do Poder Judiciário não podem ser revistas por nenhum outro Poder." },
+                ],
+                answer: "C",
+                justification: "Este princípio, também chamado de princípio do acesso à justiça, garante que nenhuma lei pode impedir que uma pessoa busque a tutela do Poder Judiciário para proteger um direito que foi lesionado ou que está sob ameaça de lesão. A regra geral no Brasil é que não se exige o esgotamento da via administrativa para acessar o Judiciário (com exceção de casos como o habeas data e a justiça desportiva).",
+                legalBasis: "Art. 5º, XXXV, da Constituição Federal",
+                page: 32,
+                articleText: "XXXV - a lei não excluirá da apreciação do Poder Judiciário lesão ou ameaça a direito;"
+            },
+            // Questão 100
+            {
+                id: 100,
+                question: "O Tribunal do Júri é uma instituição reconhecida pela Constituição, com competência para o julgamento de um grupo específico de crimes. Qual é essa competência?",
+                options: [
+                    { label: "A", text: "Os crimes hediondos e equiparados." },
+                    { label: "B", text: "Todos os crimes contra a pessoa." },
+                    { label: "C", text: "Os crimes dolosos contra a vida." },
+                    { label: "D", text: "Os crimes com pena superior a 8 anos de reclusão." },
+                    { label: "E", text: "Os crimes contra a administração pública e a fé pública." },
+                    { label: "F", text: "Os crimes de grande clamor social, a critério do juiz." },
+                ],
+                answer: "C",
+                justification: "A Constituição Federal estabelece uma competência mínima e específica para o Tribunal do Júri: o julgamento dos crimes dolosos contra a vida. São eles: homicídio, induzimento, instigação ou auxílio ao suicídio, infanticídio e aborto (e suas formas tentadas). A lei pode ampliar essa competência, mas não pode restringi-la.",
+                legalBasis: "Art. 5º, XXXVIII, 'd', da Constituição Federal",
+                page: 35,
+                articleText: "XXXVIII - é reconhecida a instituição do júri, com a organização que lhe der a lei, assegurados: (...) d) a competência para o julgamento dos crimes dolosos contra a vida;"
+            }
+        ];
+
+
+        const questionCounterEl = document.getElementById('question-counter');
+        const progressBarEl = document.getElementById('progress-bar');
+        const questionTextEl = document.getElementById('question-text');
+        const optionsContainerEl = document.getElementById('options-container');
+        const justificationAreaEl = document.getElementById('justification-area');
+        const justificationTextEl = document.getElementById('justification-text');
+        const legalBasisEl = document.getElementById('legal-basis');
+        const pageRefEl = document.getElementById('page-ref');
+        const articleTextEl = document.getElementById('article-text');
+        const prevBtn = document.getElementById('prev-btn');
+        const nextBtn = document.getElementById('next-btn');
+
+        let currentQuestionIndex = 0;
+        let userAnswers = new Array(quizData.length).fill(null);
+
+        function loadQuestion(index) {
+            // Reset areas
+            justificationAreaEl.classList.add('hidden');
+            optionsContainerEl.innerHTML = '';
+
+            const questionData = quizData[index];
+            questionTextEl.textContent = questionData.id + ". " + questionData.question;
+            
+            questionData.options.forEach(option => {
+                const button = document.createElement('button');
+                button.innerHTML = `<span class="font-bold mr-2">${option.label})</span> ${option.text}`;
+                button.dataset.label = option.label;
+                button.className = "option-btn text-left p-4 border-2 border-slate-300 rounded-lg hover:bg-slate-100 hover:border-blue-500";
+                button.onclick = () => selectAnswer(option.label, button);
+                optionsContainerEl.appendChild(button);
+            });
+
+            updateProgress();
+            updateNavigation();
+            
+            if (userAnswers[index] !== null) {
+                showJustification(userAnswers[index]);
+            }
+        }
+
+        function selectAnswer(selectedLabel, buttonEl) {
+            if (userAnswers[currentQuestionIndex] !== null) return; // Impede múltiplas respostas
+            
+            userAnswers[currentQuestionIndex] = selectedLabel;
+            showJustification(selectedLabel);
+        }
+        
+        function showJustification(selectedLabel) {
+            const questionData = quizData[currentQuestionIndex];
+            const correctLabel = questionData.answer;
+
+            Array.from(optionsContainerEl.children).forEach(btn => {
+                btn.disabled = true;
+                const btnLabel = btn.dataset.label;
+                if (btnLabel === correctLabel) {
+                    btn.classList.add('correct');
+                } else if (btnLabel === selectedLabel) {
+                    btn.classList.add('incorrect');
+                }
+            });
+            
+            justificationTextEl.textContent = questionData.justification;
+            legalBasisEl.textContent = questionData.legalBasis;
+            pageRefEl.textContent = questionData.page;
+            articleTextEl.textContent = questionData.articleText;
+            justificationAreaEl.classList.remove('hidden');
+        }
+
+        function updateProgress() {
+            const progress = ((currentQuestionIndex + 1) / quizData.length) * 100;
+            progressBarEl.style.width = `${progress}%`;
+            questionCounterEl.textContent = `Questão ${currentQuestionIndex + 1} de ${quizData.length}`;
+        }
+
+        function updateNavigation() {
+            prevBtn.disabled = currentQuestionIndex === 0;
+            nextBtn.disabled = currentQuestionIndex === quizData.length - 1;
+            prevBtn.classList.toggle('opacity-50', prevBtn.disabled);
+            nextBtn.classList.toggle('opacity-50', nextBtn.disabled);
+        }
+
+        prevBtn.addEventListener('click', () => {
+            if (currentQuestionIndex > 0) {
+                currentQuestionIndex--;
+                loadQuestion(currentQuestionIndex);
+            }
+        });
+
+        nextBtn.addEventListener('click', () => {
+            if (currentQuestionIndex < quizData.length - 1) {
+                currentQuestionIndex++;
+                loadQuestion(currentQuestionIndex);
+            }
+        });
+
+        // Iniciar o quiz
+        loadQuestion(currentQuestionIndex);
+
+    </script>
+</body>
+</html>
